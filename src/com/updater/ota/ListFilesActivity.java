@@ -245,13 +245,13 @@ public class ListFilesActivity extends ListActivity implements AdapterView.OnIte
 //                                            new SimpleDateFormat("yyyy-MM-dd_HH.mm").format(new Date()) + 
 //                                            "' >> /cache/recovery/extendedcommand\n");
 //                                }
-                                if (selectedOpts[0]) {
-                                    os.writeBytes("echo '--wipe_data' >> /cache/recovery/command\n");
-                                }
-                                if (selectedOpts[1]) {
-                                    os.writeBytes("echo '--wipe_cache' >> /cache/recovery/command\n");
-                                }
-                                os.writeBytes("echo '--update_package=" + path + "' >> /cache/recovery/command\n");
+//                                if (selectedOpts[0]) {
+  //                                  os.writeBytes("echo '--wipe_data' >> /cache/recovery/command\n");
+    //                            }
+      //                          if (selectedOpts[1]) {
+        //                            os.writeBytes("echo '--wipe_cache' >> /cache/recovery/command\n");
+          //                      }
+            //                    os.writeBytes("echo '--update_package=" + path + "' >> /cache/recovery/command\n");
                                 os.writeBytes("reboot recovery\n");
                                 os.writeBytes("exit\n");
                                 os.flush();
